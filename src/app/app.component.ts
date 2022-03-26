@@ -10,22 +10,25 @@ interface Tarefas {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  n: number;
+
   v: string;
   list: Array<Tarefas> = [];
+  meuStorage = localStorage;
 
-  constructor() {
-   
-  }
+  constructor() {}
 
   add(v: string) {
-    this.list.push({ v });
+    this.list.push({v});
+    localStorage.setItem("v","teste")
   }
 
-  getList() {
-    
+  remove(index: number){
+    this.list.splice(index, 1);
+    localStorage.removeItem("item");
+  }
+
+  getList() {   
     return this.list;
-  }
-
+  } 
 
 }

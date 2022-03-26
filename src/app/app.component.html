@@ -1,7 +1,7 @@
 <h1>Exercício 07 - To-do list com localStorage</h1>
 <hr/>
 
-<h2> Tarefas </h2>
+<h2>Tarefas</h2>
 
 <div>
   <input type="text" [(ngModel)]="v" />
@@ -10,10 +10,11 @@
 
 <table>
   <tr>
-    <th>Tarefas Adicionadas:</th>
+    <th><br>Tarefas Adicionadas:</th>
   </tr>
   <tr *ngFor="let item of getList(); index as i">
-    <td>{{tarefas.v}}</td>
+    <td>{{item.v}}</td>
+    <button type="button" (click)="remove(i)">Concluída</button>
   </tr>
 </table>
       
