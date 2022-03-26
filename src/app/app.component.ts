@@ -19,7 +19,7 @@ export class AppComponent {
 
   add(v: string) {
     this.list.push({v});
-    this.meuStorage.setItem("v","teste")
+    this.meuStorage.setItem('Tarefas','v');
   }
 
   remove(index: number){
@@ -30,5 +30,9 @@ export class AppComponent {
   getList() {   
     return this.list;
   } 
+
+  ngOnInit() {
+    this.v = localStorage.getItem("list");
+  }
 
 }
