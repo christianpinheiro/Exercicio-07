@@ -12,7 +12,7 @@ interface Tarefas {
 export class AppComponent {
 
   v: string;
-  list: Array<Tarefas> = [];
+  list: Array<Tarefas> = []; 
   meuStorage = localStorage;
 
   constructor() {}
@@ -32,7 +32,7 @@ export class AppComponent {
   } 
 
   ngOnInit() {
-    this.v = localStorage.getItem("list");
+    this.v = localStorage.getItem("v");
   }
 
 }
