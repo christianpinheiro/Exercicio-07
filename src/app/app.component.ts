@@ -19,12 +19,12 @@ export class AppComponent {
 
   add(v: string) {
     this.list.push({v});
-    this.meuStorage.setItem('Tarefas',this.v);
+    this.meuStorage.setItem("list",this.v);
   }
 
   remove(index: number){
     this.list.splice(index, 1);
-    this.meuStorage.removeItem("Tarefas");
+    this.meuStorage.removeItem("list");
   }
 
   getList() {   
