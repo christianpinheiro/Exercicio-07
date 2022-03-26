@@ -19,12 +19,12 @@ export class AppComponent {
 
   add(v: string) {
     this.list.push({v});
-    localStorage.setItem("v","teste")
+    this.meuStorage.setItem("v","teste")
   }
 
   remove(index: number){
     this.list.splice(index, 1);
-    localStorage.removeItem("item");
+    this.meuStorage.removeItem("item");
   }
 
   getList() {   
